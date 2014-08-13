@@ -1,0 +1,23 @@
+setupper
+
+CLONE and SETUP
+git init
+git clone https://github.com/MikaDotSek/sekprotox
+npm install
+bower update
+
+SESSIO
+
+ConEmu task
+> -new_console:d:B:\DOCS\DOKUMENTIT\BUILDS\sekprotox
+
+grunt
+
+grunt serve
+
+grunt serve:dist
+
+ConEmu task ADMIN
+-new_console:d:C:\mongodb\bin
+
+mongod.exe

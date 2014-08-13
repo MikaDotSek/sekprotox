@@ -23,3 +23,267 @@
     margin-top 70px
     padding 30px 0
     text-align center
+
+/* Mine */
+/* Minigrid */
+.block-group, .block, .block-group:after, .block:after, .block-group:before, .block:before
+  -webkit-box-sizing border-box
+  -moz-box-sizing border-box
+  box-sizing border-box
+
+.block-group
+  *zoom 1
+  list-style-type none
+  padding 0
+  margin 0
+  &:after
+    clear both
+  & > .block-group
+    clear none
+    float left
+    margin 0 !important
+
+.block-group:before, .block-group:after
+  display table
+  content ""
+  line-height 0
+
+.block
+  float left
+  width 100%
+/* variables */
+//sekbluergb = "80, 45, 210"
+sekblue = rgba(80, 45, 210, 1)
+//sekblue = rgb(s(sekbluergb))
+
+sekgrey = rgba(230, 230, 230, 1)
+sekviolet = rgba(180, 120, 255, 1)
+sekskin = rgba(255, 215, 170, 1)
+sekgreen = rgba(190, 255, 125, 1)
+sekred = rgba(255, 150, 150, 1)
+sekblack = rgba(0, 0, 0, 0.9)
+sekwhite = rgba(255, 255, 255, 1)
+bg-color = sekblue
+page-color = sekgrey
+
+sek-font-family-name = "Myriad Semicondensed"
+font-stack = "'Myriad Semicondensed', MyriadPro-Regular, 'Myriad Pro Regular', MyriadPro, 'Myriad Pro', 'Lucida Grande', 'Lucida Sans Unicode', 'Liberation Sans', 'Nimbus Sans L', 'Helvetica Neue', Helvetica, Arial, sans-serif;"
+
+sek-font-family = unquote(font-stack)
+//sek-font-family = "Myriad Semicondensed", MyriadPro-Regular, "Myriad Pro Regular", MyriadPro, "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+sek-font-family-secondary = "Myriad Semicondensed", MyriadPro-Regular, "Myriad Pro Regular", MyriadPro, "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+header-font-family = sek-font-family
+body-font-family = sek-font-family-secondary
+
+ /* Typo */ 
+ h1
+  font 4.4em / 0.85 header-font-family
+  margin-top: 0.5em
+  margin-bottom: .45em
+  color sekblack
+  text-transform uppercase
+  font-weight 900
+  strong
+    color sekred
+
+ h2
+  font 2.2em / 1 header-font-family
+  margin-bottom: .45em
+  color sekblack
+  strong
+    color sekred
+
+h3
+  font 2.2em / 1 header-font-family
+  margin-bottom .45em
+  color sekblack
+  text-transform uppercase
+  font-style italic
+  font-weight 100
+  strong
+    color sekred
+
+p
+    font-family body-font-family
+    color sekblack
+    strong, em
+        color sekred    
+        font-weight 100
+a
+  font-family body-font-family
+a:link
+  color: sekblue
+a:visited
+  color: sekblue
+a:hover
+  color: sekblue
+a:active
+  color: sekblue
+
+/* elements */
+body
+  background-color bg-color
+.page
+  max-width 1240px
+  min-height 1000px
+  min-height 100vh
+  margin 1em auto
+  background-color page-color
+.header
+  width 100%
+  padding 0.52em 2em
+  border 1px solid grey
+  background-color black
+  color white
+  h1 
+    color white
+.hero
+  min-height 460px
+  background-image url(http://blogsdir.cms.rrcdn.com/5/files/2013/05/11089781-image-of-a-closeup-of-a-womans-dirty-hands.jpg)
+  background-size cover
+  background-repeat no-repeat
+  -webkit-filter blur(1px)
+
+.col
+  @extend .block
+  // border 1px solid grey
+  padding 1em
+.aside, .secondary, .main
+  @extend .col
+.adjectives
+  padding 1em
+    
+
+ /*styles */
+
+.adjective
+  font    1.8em/1.1 body-font-family
+  color  sekblue
+  text-transform  uppercase
+  font-weight  900
+  display block  
+
+.typo
+  h1, h2, h3, p
+    &:after
+        font-size 0.21em
+        color sekviolet
+        typo-msg = "Font: " sek-font-family-name ", Font stack: " font-stack "font 4.4em / 0.85 header-font-family, text-transform uppercase, font-weight 900"
+        //content typo-msg
+
+.button
+    display inline-block
+    box-sizing border-box
+    height 200px
+    width 200px
+    //border 5px solid sekwhite
+    border-radius 3%
+    margin 15px
+    
+    padding 2em 2em 0 2em
+    
+    text-align center
+    text-decoration none
+    font $header-font-family
+    letter-spacing 1px
+    text-transform uppercase
+    text-shadow 0px -1px 0px rgba(0, 0, 0, 0.5)
+    transition all .2s ease
+    
+
+.button-1
+   color white
+   background-color lighten(sekblue, 0%)
+   &:hover
+     background: darken(sekblue, 10%)
+
+.button-2
+   color darken(sekskin, 60%)
+   background-color darken(sekskin, 0%)
+   &:hover
+     background: darken(sekskin, 10%)
+
+.button-3
+   color white
+   border-radius 50%
+   background-color lighten(sekred, 0%)
+   &:hover
+     background: darken(sekred, 10%)
+
+.button-4
+   background-color lighten(sekgrey, 60%)
+   &:hover
+     background: darken(sekgrey, 10%)
+
+    
+.colors li
+    display block
+    width 100%
+    min-height 50px
+    border 5px solid sekwhite
+    margin 25px 0
+    &:before
+      display block
+      position absolute
+      margin-top -1em
+      font-size 0.4em
+      color sekviolet
+    
+.color-1
+    height 200px
+    licolor = sekblue
+    background-color licolor
+    &:before
+      content "color: "  + licolor 
+.color-2
+    height 200px
+    licolor = sekgrey
+    background-color licolor
+    &:before
+      content "color: "  + licolor 
+    
+.color-3
+    height 100px
+    licolor = sekskin
+    background-color licolor
+    &:before
+      content "color: "  + licolor 
+.color-4
+    height 100px
+    licolor = sekviolet
+    background-color licolor
+    &:before
+      content "color: "  + licolor 
+.color-5
+    licolor = sekgreen
+    background-color licolor
+    &:before
+      content "color: "  + licolor 
+.color-6
+    licolor = sekred
+    background-color licolor
+    &:before
+      content "color: "  + licolor 
+
+ .gradient-1
+    height 300px
+    width 300px
+    border 5px solid sekwhite
+    border-radius 50%
+    background-image: -webkit-linear-gradient(bottom, sekskin, sekred, sekblue);
+    background-image: -moz-linear-gradient(bottom, sekskin, sekred, sekblue);
+    background-image: -o-linear-gradient(bottom, sekskin, sekred, sekblue);
+    background-image: linear-gradient(to top, sekskin, sekred, sekblue);
+    
+    
+/* Responsive */
+@media screen and (min-width: 768px)
+  .aside
+      width 10%
+  .secondary
+      width 30%
+  .main
+      width 60%
+    
+
+    

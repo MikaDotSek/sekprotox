@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module 'sekprotoApp'
+angular.module 'sekprotoxApp'
 .factory 'User', ($resource) ->
   $resource '/api/users/:id/:controller',
     id: '@_id'

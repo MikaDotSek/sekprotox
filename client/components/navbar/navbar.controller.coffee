@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module 'sekprotoApp'
+angular.module 'sekprotoxApp'
 .controller 'NavbarCtrl', ($scope, $location, Auth) ->
   $scope.menu = [
     title: 'Home'

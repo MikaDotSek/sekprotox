@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module 'sekprotoApp'
+angular.module 'sekprotoxApp'
 .config ($stateProvider) ->
   $stateProvider
   .state 'main',

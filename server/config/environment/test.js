@@ -5,6 +5,6 @@
 module.exports = {
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/sekproto-test'
+    uri: 'mongodb://localhost/sekprotox-test'
   }
 };

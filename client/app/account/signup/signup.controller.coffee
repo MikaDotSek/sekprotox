@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module 'sekprotoApp'
+angular.module 'sekprotoxApp'
 .controller 'SignupCtrl', ($scope, Auth, $location) ->
   $scope.user = {}
   $scope.errors = {}

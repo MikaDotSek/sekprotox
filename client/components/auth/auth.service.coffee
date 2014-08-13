@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module 'sekprotoApp'
+angular.module 'sekprotoxApp'
 .factory 'Auth', ($location, $rootScope, $http, User, $cookieStore, $q) ->
   currentUser = if $cookieStore.get 'token' then User.get() else {}
 

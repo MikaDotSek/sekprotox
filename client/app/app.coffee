@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module 'sekprotoApp', [
+angular.module 'sekprotoxApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',

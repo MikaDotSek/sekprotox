@@ -1,5 +1,5 @@
 {
-  "name": "sekproto",
+  "name": "sekprotox",
   "version": "0.0.0",
   "main": "server/app.js",
   "dependencies": {
