@@ -10,8 +10,14 @@ var User = require('../api/user/user.model');
 
 Thing.find({}).remove(function() {
   Thing.create({
-    name : 'Development Tools',
-    info : 'Integration with popular tools such as Bower, Grunt, Karma, Mocha, JSHint, Node Inspector, Livereload, Protractor, Jade, Stylus, Sass, CoffeeScript, and Less.'
+    name : 'Ei Läskiä',
+    info : 'Kaikki turhat CMS:t, Frameworkit ja muut riippuvaiset leikattu pois.'
+  }, {
+    name : 'Ketterä, hajautettu toteutus',
+    info : '2014. MEAN kaikki javascritillä, servistä tietokantaan'
+  }, {
+    name : 'Server and Client integration',
+    info : 'Built with a powerful and fun stack: MongoDB, Express, AngularJS, and Node.'
   }, {
     name : 'Server and Client integration',
     info : 'Built with a powerful and fun stack: MongoDB, Express, AngularJS, and Node.'
