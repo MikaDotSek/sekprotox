@@ -285,7 +285,13 @@ body
     background-image: -moz-linear-gradient(bottom, sekskin, sekred, sekblue);
     background-image: -o-linear-gradient(bottom, sekskin, sekred, sekblue);
     background-image: linear-gradient(to top, sekskin, sekred, sekblue);
-    
+   
+
+/* Proto Styles*/ 
+section
+  @extend .block
+.kulmakivet article 
+  @extend .block
     
 /* Responsive */
 @media screen and (min-width: 768px)
@@ -295,6 +301,11 @@ body
       width 30%
   .main
       width 60%
+  .proto 
+      .main 
+          width 100%
+  .kulmakivet article 
+      width 33%
     
 
     
