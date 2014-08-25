@@ -8,7 +8,6 @@
 var Thing = require('../api/thing/thing.model');
 var User = require('../api/user/user.model');
 
-
 Thing.find({}).remove(function() {
   Thing.create({
     name : 'Sek & Grey ',
@@ -57,7 +56,6 @@ Thing.find({}).remove(function() {
     kontaktipuh : '+358 40 167 6300'
   });
 });
-
 
 User.find({}).remove(function() {
   User.create({

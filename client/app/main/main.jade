@@ -1,12 +1,13 @@
 div(ng-include='"components/navbar/navbar.html"')
 
 .header
-  h1(ng-hide="kissa") Style guide
-  h1(ng-show="kissa") Proto
   .button.button-1(ng-click="kissa = !kissa")   
       h4 toggle StyleTile / PROTO
+  h1(ng-show="kissa") Style guide
+  h1(ng-hide="kissa") Proto
+  
 
-.page.block-group(ng-hide="kissa")
+.page.block-group(ng-show="kissa")
   //- .hero 
     
   .aside 
@@ -79,7 +80,7 @@ div(ng-include='"components/navbar/navbar.html"')
 //-     p.lead Kick-start your next web app with Angular Fullstack
 //-     img(src='assets/images/yeoman.png', alt='I\'m Yeoman')
 
-.page.proto.block-group(ng-show="kissa")
+.page.proto.block-group(ng-hide="kissa")
   .hero 
     
   .aside 
@@ -89,6 +90,10 @@ div(ng-include='"components/navbar/navbar.html"')
         h1 Intro
         p Muuttuva maailma voi pysähtyä pelkäämään. Valta on Sinulla. Kaivetaan esiin oikea asenne, oikea ajattelu ja oikeat teot. Tehdään parempaa markkinointia.
         hr
+
+    section.blogi
+      h1 blogi 
+      div(ng-include='"app/data/blogi.html"')
 
     section.kulmakivet
       article
@@ -103,34 +108,52 @@ div(ng-include='"components/navbar/navbar.html"')
         h1 Oikeat teot
         p Valitse yksi asia, jossa päätät olla paras. Maailman paras. Ajattele. Pidemmälle. Pidempään.Sitoudu siihen mihin ryhdyt.Heittäydy rohkeasti. Rohkaise muita.Uskalla epäonnistua. Opi virheistä.Todista puheesi teoilla.Näytä tietä myös takana tuleville.Tee asiakkaittesi asiakkaista voittajia.Tee asiakkaistasi voittajia.
 
-    section.arvot
-      article
-        h1 Ylpeys - AVOIMUUS
-        p Unohdetaan ylimielinen starakulttuuri. Se joka luuduttaa ajattelun, lukitsee tavat ja jämähdyttäämakaamaan menneiden saavutusten päällä. Kunluulee hallitsevansa kaiken, ei kehity. Ei sulkeudutalatistamaan muita ja onanoimaan omalla erinomaisuudella.Pidetään ovet auki uudelle.
 
-      article
-        h1 Kateus - ROHKEUS
-        p Kateus on surkeinta pelkuruutta. Se repii alas onnistujat, kahlitsee mielen ja näivettää nysväämään. Opetellaan uusi menestymisen kulttuuri. Kun joku menestyy, nostetaan lippu salkoon. Hurrataan sille, joka vie koko alaa eteenpäin. Peesataan imussa ja tempaistaan vuorollaan vauhdittamaan.
+    section#arvoSlider.arvot.carousel.slide(data-ride='carousel')
+      ol.carousel-indicators
+        li.active(data-target='#arvoSlider', data-slide-to='0')
+        li(data-target='#arvoSlider', data-slide-to='1')
+        li(data-target='#arvoSlider', data-slide-to='2')
+        li(data-target='#arvoSlider', data-slide-to='3')
+        li(data-target='#arvoSlider', data-slide-to='4')
+        li(data-target='#arvoSlider', data-slide-to='5')
+        li(data-target='#arvoSlider', data-slide-to='6')
+        // li(data-target='#arvoSlider', data-slide-to='2')
 
-      article
-        h1 Kauna - KUMPPANUUS
-        p Kateus on surkeinta pelkuruutta. Se repii alas onnistujat, kahlitsee mielen ja näivettää nysväämään. Opetellaan uusi menestymisen kulttuuri. Kun joku menestyy, nostetaan lippu salkoon. Hurrataan sille, joka vie koko alaa eteenpäin. Peesataan imussa ja tempaistaan vuorollaan vauhdittamaan.
+      .carousel-inner
+        article.item.active
+          h1 Ylpeys - AVOIMUUS
+          p Unohdetaan ylimielinen starakulttuuri. Se joka luuduttaa ajattelun, lukitsee tavat ja jämähdyttäämakaamaan menneiden saavutusten päällä. Kunluulee hallitsevansa kaiken, ei kehity. Ei sulkeudutalatistamaan muita ja onanoimaan omalla erinomaisuudella.Pidetään ovet auki uudelle.
 
-      article
-        h1 Laiskuus - INTOHIMO
-        p Kavahdetaan henkistä laiskuutta ja selkärangattomuutta. Ei jäädä ensimmäiseen ajatukseen, mutta ei myöskään vaihdeta näkemystä joka tuulen mukana. Ei tyydytä olemaan kasiplushyvä Suomessa. Halutaan olla maailman paras. Jossain. Ja sitoudutaan tekemään kaikkemme sen puolesta.
+        article.item
+          h1 Kateus - ROHKEUS
+          p Kateus on surkeinta pelkuruutta. Se repii alas onnistujat, kahlitsee mielen ja näivettää nysväämään. Opetellaan uusi menestymisen kulttuuri. Kun joku menestyy, nostetaan lippu salkoon. Hurrataan sille, joka vie koko alaa eteenpäin. Peesataan imussa ja tempaistaan vuorollaan vauhdittamaan.
 
-      article
-        h1 Ahneus - VASTUULLISUUS
-        p Jätetään ahneus moukille. Kaihdetaan alan ryvettämistä piittaamattomalla pikavoittojen napsinnalla, nulikkamaisella egon pönkityksellä ja matalimpia aitoja etsimällä. Mitä markkinoinnin etujoukko edellä, sen kaikujen mukaan kuljetaan niin pörssiyhtiöissä, peruskouluissa kuin pientareilla.
+        article.item
+          h1 Kauna - KUMPPANUUS
+          p Kateus on surkeinta pelkuruutta. Se repii alas onnistujat, kahlitsee mielen ja näivettää nysväämään. Opetellaan uusi menestymisen kulttuuri. Kun joku menestyy, nostetaan lippu salkoon. Hurrataan sille, joka vie koko alaa eteenpäin. Peesataan imussa ja tempaistaan vuorollaan vauhdittamaan.
 
-      article
-        h1 Ylensyönti - NÄKEMYKSELLISYYS
-        p Unohdetaan ylimielinen starakulttuuri. Se joka luuduttaa ajattelun, lukitsee tavat ja jämähdyttäämakaamaan menneiden saavutusten päällä. Kunluulee hallitsevansa kaiken, ei kehity. Ei sulkeudutalatistamaan muita ja onanoimaan omalla erinomaisuudella.Pidetään ovet auki uudelle.
+        article.item
+          h1 Laiskuus - INTOHIMO
+          p Kavahdetaan henkistä laiskuutta ja selkärangattomuutta. Ei jäädä ensimmäiseen ajatukseen, mutta ei myöskään vaihdeta näkemystä joka tuulen mukana. Ei tyydytä olemaan kasiplushyvä Suomessa. Halutaan olla maailman paras. Jossain. Ja sitoudutaan tekemään kaikkemme sen puolesta.
 
-      article
-        h1 Himo - TULOKSELLISUUS
-        p Napa paukkuu, jos nauttii kaikkea kaikilta. Ei kukaanjaksa, jos punkee kymmenen viestiä kymmeneensekuntiin. Tai yhteen sivuun. Kirkastetaan strategiatja viestit. Karsitaan turha ja keskitytään tärkeimpään.Ollaan rehdisti mieltä, ei lässähdetä palvomaankaikkien kieltä.
+        article.item
+          h1 Ahneus - VASTUULLISUUS
+          p Jätetään ahneus moukille. Kaihdetaan alan ryvettämistä piittaamattomalla pikavoittojen napsinnalla, nulikkamaisella egon pönkityksellä ja matalimpia aitoja etsimällä. Mitä markkinoinnin etujoukko edellä, sen kaikujen mukaan kuljetaan niin pörssiyhtiöissä, peruskouluissa kuin pientareilla.
+
+        article.item
+          h1 Ylensyönti - NÄKEMYKSELLISYYS
+          p Unohdetaan ylimielinen starakulttuuri. Se joka luuduttaa ajattelun, lukitsee tavat ja jämähdyttäämakaamaan menneiden saavutusten päällä. Kunluulee hallitsevansa kaiken, ei kehity. Ei sulkeudutalatistamaan muita ja onanoimaan omalla erinomaisuudella.Pidetään ovet auki uudelle.
+
+        article.item
+          h1 Himo - TULOKSELLISUUS
+          p Napa paukkuu, jos nauttii kaikkea kaikilta. Ei kukaanjaksa, jos punkee kymmenen viestiä kymmeneensekuntiin. Tai yhteen sivuun. Kirkastetaan strategiatja viestit. Karsitaan turha ja keskitytään tärkeimpään.Ollaan rehdisti mieltä, ei lässähdetä palvomaankaikkien kieltä.
+
+      a.left.carousel-control(href='#arvoSlider', role='button', data-slide='prev')
+        span.glyphicon.glyphicon-chevron-left
+        
+      a.right.carousel-control(href='#arvoSlider', role='button', data-slide='next')
+        span.glyphicon.glyphicon-chevron-right
 
     section.slogan
       article
@@ -150,57 +173,28 @@ div(ng-include='"components/navbar/navbar.html"')
       h1 Yhtiöt (this gomes from Mongo)
       article(ng-repeat='thing in awesomeThings')
         h1 {{thing.name}}
-        //- h2 {{thing.toimiala}} 
-        //- p {{thing.osoite}} 
-        //- p {{thing.puhelin}}
-        //- p {{thing.emails}} 
-        //- p {{thing.kontakti}}
-        //- p {{thing.titteli}}
-        //- p {{thing.kontaktipuh}}    
+        h2 {{thing.toimiala}} 
+        p {{thing.osoite}} 
+        p {{thing.puhelin}}
+        p {{thing.emails}} 
+        p {{thing.kontakti}}
+        p {{thing.titteli}}
+        p {{thing.kontaktipuh}}  
 
-    section.palvelut
-      h1 Palvelut 
-      //- (this gomes from Mongo)
-      article
-        h1 KAIKKI VAIKUTTAMISEN PALVELUT SUOMESSA JA MAAILMALLA
-        p Kun haluat tehdä vaikutuksen ihmisten mieliin tai käyttäytymiseen, ota yhteyttä. Valitsemme sinulle tavoitteisiisi parhaiten sopivan tiimin ja maan laajimmasta palveluvalikoimastamme parhaat vaihtoehdot.
-        p SEK on osa Salomaa Groupia, jonka palveluksessa on yhteensä yli 400 vaikuttamisen ammattilaista. Saat kauttamme tulokselliseen tiimityöhön mukaan myös media- ja tutkimustoimistojen vahvimmat voimat: Dagmarin tai Mediatoimisto Voiton ja Qualitemsin
-        p Kansainvälisen ketjumme WPP:n kautta saat tarvittaessa tueksesi 2 400 markkinointitoimistoa 107 maassa, Starcom-ketjun kautta 110 mediatoimistoa 67 maassa ja Cohn & Wolfe -ketjun kautta lähes 60 viestintätoimistoa ympäri maailman.
+    section.asiakkaat
+      h1 Asiakkaat 
+      div(ng-include='"app/data/asiakkaat.html"')
 
-      article.palvelu
-        h1 BRÄNDI- JA MARKKINOINTI­STRATEGIAT
-        p Kun haluat tehdä vaikutuksen ihmisten mieliin tai käyttäytymiseen, ota yhteyttä. Valitsemme sinulle tavoitteisiisi 
-        ul
-          li Nykytilan ja tavoitteiden määrittely
-          li Kilpailuedun tunnistaminen
-          li Analyysit
-          li Strategian suunnittelu
-          li Brändin positiointi
-          li Brändihierarkian määrittely
-          li Markkinoinnin optimointi
-        p Kun haluat parantaa markkinointisi tuloksellisuutta, ota yhteyttä.
-        hr
-        p(style='white-space:pre;') Topi Lintukangas
-          | toimitusjohtaja
-          | +358 40 167 6300
-          //- a(href='mailto://topi.lintukangas@sek.fi;) topi.lintukangas@sek.fi
+    section.palkinnot
+      h1 Palkinnot 
+      div(ng-include='"app/data/palkinnot.html"')
 
+    section.rekrytointi
+      h1 Rekrytointi 
+      div(ng-include='"app/data/rekrytointi.html"')
 
+    section.kontakti
+      h1 Kontakti 
+      div(ng-include='"app/data/kontakti.html"')
 
-
-//- .page.container.generator-features.animate-show(ng-show="kissa")
-//-   .row
-//-     .col-lg-12
-//-       h1.page-header Features: (this gomes from Mongo)
-//-       ul.nav.nav-tabs.nav-stacked.col-md-4.col-lg-4.col-sm-6(ng-repeat='thing in awesomeThings')
-//-         li
-//-           a(href='#', tooltip='{{thing.info}}')
-//-             | {{thing.name}}
-
-//- footer.footer
-//-   .container
-//-     p
-//-       a(href='https://twitter.com/tyhenkel') @tyhenkel
-//-       = ' | '
-//-       a(href='https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open') Issues
-
+ 

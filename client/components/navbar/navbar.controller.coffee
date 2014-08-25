@@ -3,7 +3,7 @@
 angular.module 'sekprotoxApp'
 .controller 'NavbarCtrl', ($scope, $location, Auth) ->
   $scope.menu = [
-    title: 'Home'
+    title: ''
     link: '/'
   ]
   $scope.isCollapsed = true

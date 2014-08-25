@@ -18,6 +18,7 @@ describe 'Controller: MainCtrl', ->
       'Karma'
       'Express'
     ]
+
     scope = $rootScope.$new()
     MainCtrl = $controller 'MainCtrl',
       $scope: scope

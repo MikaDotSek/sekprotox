@@ -17,3 +17,4 @@ angular.module 'sekprotoxApp'
 
   $scope.deleteThing = (thing) ->
     $http.delete '/api/things/' + thing._id
+
