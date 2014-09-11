@@ -1,22 +1,115 @@
 div(ng-include='"components/navbar/navbar.html"')
 
-.header
-  h1 Sek ProtoYoYX
-.page.block-group
-  .hero
+.page.proto.block-group
+  .hero 
+    
+  .aside 
+  .main
+    
+
+    section.intro
+      article
+        h1 Intro
+        p Muuttuva maailma voi pysähtyä pelkäämään. Valta on Sinulla. Kaivetaan esiin oikea asenne, oikea ajattelu ja oikeat teot. Tehdään parempaa markkinointia.
+        hr
+
+    section.blogi
+      h1 blogi 
+      div(ng-include='"app/data/blogi.html"')
+
+    section.kulmakivet
+      article
+        h1 Oikea asenne
+        p Voittaminen on tahtolaji
+
+      article
+        h1 Oikea ajattelu
+        p Rajattomasti Avarasti Yllättävästi Vastuullisesti Laajasti Oivaltavasti Kuunnellen Keskustellen Leikkisästi Hullutellen Luonnollisesti TerävästiAsenteettomasti Asenteellisesti Kansainvälisesti Iholla SilmilläKorvilla Nenällä Vatsalla Lompakolla Vyötäröllä Geeneillä HormoneillaVieteillä Vaistolla Tunteella Excelillä Faktoilla AivoillaJärkevästi Järjettömästi Sydämellä Eläytyen Kokeellisesti SyvästiKorkealta Hipaisten Heittäytyen Tunnustellen Yhdistellen Ymmärtäen Tajuten Oppien Viisastuen Uskaltaen Useammin Pidempään Enemmän
+
+      article
+        h1 Oikeat teot
+        p Valitse yksi asia, jossa päätät olla paras. Maailman paras. Ajattele. Pidemmälle. Pidempään.Sitoudu siihen mihin ryhdyt.Heittäydy rohkeasti. Rohkaise muita.Uskalla epäonnistua. Opi virheistä.Todista puheesi teoilla.Näytä tietä myös takana tuleville.Tee asiakkaittesi asiakkaista voittajia.Tee asiakkaistasi voittajia.
 
 
-//- <article class="repeated-item content-article" ng-repeat="item in sek0.items| filter:item" ng-model="item.ordered"  ng-animate=" 'animate' "  draggable="true"  >
-//- 	<h1 class="">{{item.header}}</h1>
-//- 	<span>id: {{item.id}}</span>
-//- 	<span>page: {{item.page}}</span>
-//- 	<span>cat: {{item.cat}}</span>
-//- 	<span>subcat: {{item.subCat}}</span>
-//- 	<h2>{{item.subHeader}}</h2>
-//- 	<p>{{item.para1}}</p>
-//- 	<p>{{item.para2}}</p>
-//- 	<p>{{item.para3}}</p>
-//- 	<p>{{item.para4}}</p>
-//- 	<p>{{item.para5}}</p>
-//- 	<p>{{item.para6}}</p>
-//- </article>
+          
+   
+
+    section#arvoSlider.arvot.carousel.slide(ng-controller='CarouselDemoCtrl')
+      //- div(style='height: 605px;')
+      carousel(interval='myInterval' style='height: 305px;')
+        slide( active='slide.active')
+          article.item.active
+            h1 Ylpeys - AVOIMUUS
+            p Unohdetaan ylimielinen starakulttuuri. Se joka luuduttaa ajattelun, lukitsee tavat ja jämähdyttäämakaamaan menneiden saavutusten päällä. Kunluulee hallitsevansa kaiken, ei kehity. Ei sulkeudutalatistamaan muita ja onanoimaan omalla erinomaisuudella.Pidetään ovet auki uudelle.
+
+        slide
+          article.item
+            h1 Kateus - ROHKEUS
+            p Kateus on surkeinta pelkuruutta. Se repii alas onnistujat, kahlitsee mielen ja näivettää nysväämään. Opetellaan uusi menestymisen kulttuuri. Kun joku menestyy, nostetaan lippu salkoon. Hurrataan sille, joka vie koko alaa eteenpäin. Peesataan imussa ja tempaistaan vuorollaan vauhdittamaan.
+
+        slide
+          article.item
+            h1 Kauna - KUMPPANUUS
+            p Kateus on surkeinta pelkuruutta. Se repii alas onnistujat, kahlitsee mielen ja näivettää nysväämään. Opetellaan uusi menestymisen kulttuuri. Kun joku menestyy, nostetaan lippu salkoon. Hurrataan sille, joka vie koko alaa eteenpäin. Peesataan imussa ja tempaistaan vuorollaan vauhdittamaan.
+
+        slide
+          article.item
+            h1 Laiskuus - INTOHIMO
+            p Kavahdetaan henkistä laiskuutta ja selkärangattomuutta. Ei jäädä ensimmäiseen ajatukseen, mutta ei myöskään vaihdeta näkemystä joka tuulen mukana. Ei tyydytä olemaan kasiplushyvä Suomessa. Halutaan olla maailman paras. Jossain. Ja sitoudutaan tekemään kaikkemme sen puolesta.
+
+        slide
+          article.item
+            h1 Ahneus - VASTUULLISUUS
+            p Jätetään ahneus moukille. Kaihdetaan alan ryvettämistä piittaamattomalla pikavoittojen napsinnalla, nulikkamaisella egon pönkityksellä ja matalimpia aitoja etsimällä. Mitä markkinoinnin etujoukko edellä, sen kaikujen mukaan kuljetaan niin pörssiyhtiöissä, peruskouluissa kuin pientareilla.
+
+        slide
+          article.item
+            h1 Ylensyönti - NÄKEMYKSELLISYYS
+            p Unohdetaan ylimielinen starakulttuuri. Se joka luuduttaa ajattelun, lukitsee tavat ja jämähdyttäämakaamaan menneiden saavutusten päällä. Kunluulee hallitsevansa kaiken, ei kehity. Ei sulkeudutalatistamaan muita ja onanoimaan omalla erinomaisuudella.Pidetään ovet auki uudelle.
+
+        slide
+          article.item
+            h1 Himo - TULOKSELLISUUS
+            p Napa paukkuu, jos nauttii kaikkea kaikilta. Ei kukaanjaksa, jos punkee kymmenen viestiä kymmeneensekuntiin. Tai yhteen sivuun. Kirkastetaan strategiatja viestit. Karsitaan turha ja keskitytään tärkeimpään.Ollaan rehdisti mieltä, ei lässähdetä palvomaankaikkien kieltä.
+
+    section.slogan
+      article
+        h3 Vuodet ja tekijät vaihtuvat — Asenne pysyy. Kumulatiivistä markkinointia vuodesta 1935.
+
+    section.tarina
+      article
+        h1 Sek-tarina
+        p Uusi vuosi 1935 on juuri alkanut. Ateneumissa graafikoiksi opiskelevatJorma Suhonen,&nbsp;Holger Erkelenz&nbsp;ja&nbsp;Aarno Knuus&nbsp;haaveilevat SEK-nimisen piirtämön perustamisesta. Samaan aikaan&nbsp;Aarne Salomaapoikkeaa työtovereittensa kanssa lounaalle Kämpiin. Viereisessä pöydässä istuu niin viehättävä neito, että herrat lyövät vetoa siitä, saako Aarne kutsuttua hänet viikon kuluessa päivälliselle. Vaan neitopa ilmoittaa viileästi, että hän ei illasta tuntemattomien kanssa.
+        p Tyttö opiskelee Ateneumissa, joten Aarne järjestää itsensä sinne pitämään luennon  mainonnasta. Pahaksi onneksi tyttö ei ole kuulijoiden joukossa. Vasta toisella luentokerralla tyttö istuu eturivissä. Silloin Aarne marssii tytön luo ja kysyy, joko he nyt ovat parempia tuttuja. Vastaus on myönteinen, ja pariskunta nähdään samana iltana päivällisellä Kämpissä
+        p Myös Jorma, Holger ja Aarno ovat kuuntelemassa luentoa. Sen innoittamana he ovat nyt varmoja, että on aika toteuttaa unelma. Lauantaina 9. päivä helmikuuta laaditaan Kämpin korttelissa, Mikonkadun ja Esplanadin kulmatalossa, perustusasiakirja. Näin syntyy O.Y. SEK A.B.
+        p Muutama vuosi myöhemmin toimitusjohtajaksi ja sittemmin myös omistajaksi kutsutaan Aarne Salomaa, joka ryhtyy kehittämään mainostoimistoa suomalaisen liikkeenjohdon arvostamaksi kumppaniksi. Vuosikymmenien kuluessa toimisto kasvaa, kehittyy ja muuttaa Bulevardilta Sokoksen-talon kautta Annankadulle.
+        p SEK on mukana rakentamassa Suomen menestyksekkäimpiä brändejä. Asiakkaiden kansainvälistyessä luodaan yhteys&nbsp;Grey Group&nbsp;-ketjuun. Asiakkaiden palvelutarpeiden laajentuessa perustetaan uusia yhtiöitä varmistamaan parhaat tekijät ja osaamisen jatkuva kehittäminen.
+        p Tänä päivänä SEK on osa Pohjoismaiden suurinta perheomisteista markkinointi- ja konsultointipalveluja tarjoavaa Salomaa Groupia. SEK tekee tuloksellista vaikuttamista viiden yhtiön voimin: markkinointitoimisto SEK &amp; GREY, asiakkuustoimisto SEK Loyal, tuotantotoimisto SEK Point, viestintätoimisto SEK Public sekä konsultointi- ja valmennustoimisto Perfecto.
+
+    section.firmat
+      h1 Yhtiöt (this gomes from Mongo)
+      article(ng-repeat='thing in awesomeThings')
+        h1 {{thing.name}}
+        h2 {{thing.toimiala}} 
+        p {{thing.osoite}} 
+        p {{thing.puhelin}}
+        p {{thing.emails}} 
+        p {{thing.kontakti}}
+        p {{thing.titteli}}
+        p {{thing.kontaktipuh}}  
+
+    section.asiakkaat
+      h1 Asiakkaat 
+      div(ng-include='"app/data/asiakkaat.html"')
+
+    section.palkinnot
+      h1 Palkinnot 
+      div(ng-include='"app/data/palkinnot.html"')
+
+    section.rekrytointi
+      h1 Rekrytointi 
+      div(ng-include='"app/data/rekrytointi.html"')
+
+    section.kontakti
+      h1 Kontakti 
+      div(ng-include='"app/data/kontakti.html"')

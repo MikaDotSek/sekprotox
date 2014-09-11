@@ -1,23 +1,18 @@
-@import "font-awesome/css/font-awesome.css"
-@import "bootstrap/dist/css/bootstrap.css"
+/* Typo */
 
-//
 // Bootstrap Fonts
-//
 
-/*@font-face
+@font-face
     font-family: 'Glyphicons Halflings'
     src: url('../bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot')
     src: url('../bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
     url('../bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'),
     url('../bower_components/bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'),
     url('../bower_components/bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
-*/
-//
-// Font Awesome Fonts
-//
 
-/*@font-face
+// Font Awesome Fonts
+
+@font-face
   font-family: 'FontAwesome'
   src: url('../bower_components/font-awesome/fonts/fontawesome-webfont.eot?v=4.1.0')
   src: url('../bower_components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'),
@@ -25,45 +20,49 @@
   url('../bower_components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'),
   url('../bower_components/font-awesome/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
   font-weight: normal
-  font-style: normal*/
+  font-style: normal
 
-//
-// App-wide Styles
-//
+  /* Typo */ 
+h1
+  font 4.4em / 0.85 header-font-family
+  margin-top: 0.5em
+  margin-bottom: .45em
+  color sekblack
+  text-transform uppercase
+  font-weight 900
+  strong
+    color sekred
 
-/*article
-  padding 3em
+h2
+  font 2.2em / 1 header-font-family
+  margin-bottom: .45em
+  color sekblack
+  strong
+    color sekred
 
-li 
-  list-style none
-*/
-/*
+h3
+  font 2.2em / 1 header-font-family
+  margin-bottom .45em
+  color sekblack
+  text-transform uppercase
+  font-style italic
+  font-weight 100
+  strong
+    color sekred
 
-.browsehappy
-    background #ccc
-    color #000
-    margin 0.2em 0
-    padding 0.2em 0
-
-.styletest
-  background white
-  padding 3em*/
-
-// Component styles are injected through grunt
-// injector
-@import '00_base.styl';
-@import '01_colors.styl';
-@import '02_borders.styl';
-@import '03_backgrounds.styl';
-@import '04_elements.styl';
-@import '04_typo.styl';
-@import '11_layout.styl';
-@import '12_states.styl';
-@import '13_modules.styl';
-@import '14_tests.styl';
-@import 'account/login/login.styl';
-@import 'admin/admin.styl';
-@import 'main/main.styl';
-@import 'proto/proto.styl';
-@import 'styletile/styletile.styl';
-// endinjector
+p
+    font-family body-font-family
+    color sekblack
+    strong, em
+        color sekred    
+        font-weight 100
+a
+  font-family body-font-family
+a:link
+  color: sekblue
+a:visited
+  color: sekblue
+a:hover
+  color: sekblue
+a:active
+  color: sekblue

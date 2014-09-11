@@ -3,8 +3,14 @@
 angular.module 'sekprotoxApp'
 .controller 'NavbarCtrl', ($scope, $location, Auth) ->
   $scope.menu = [
-    title: ''
-    link: '/'
+    {
+      title: 'Style'
+      link: '/styletile'
+    }
+    {
+      title: 'Proto'
+      link: '/proto'
+    }
   ]
   $scope.isCollapsed = true
   $scope.isLoggedIn = Auth.isLoggedIn
